@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+input {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+    background-color: azure;
+    border: solid 1px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*button {
+    width: 150px;
+    height: 27px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+}*/
+
+p {
+    margin-top: 30px;
+}
+
+span, button {
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+
+span a, button {
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+}
+
+span a:before,
+span a:after, button {
+    position: absolute;
+    content: "Buscar Contato";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+span a:before, button {
+    color: #FFFFFF;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+span a:after, button {
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+button, span a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+
+}
